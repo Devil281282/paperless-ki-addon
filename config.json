@@ -1,0 +1,21 @@
+{
+  "name": "Paperless KI Analyzer",
+  "version": "1.0.0",
+  "slug": "paperless_ki",
+  "description": "Automatische Dokumentenanalyse für Paperless-NGX mit KI",
+  "startup": "application",
+  "boot": "auto",
+  "homeassistant": "2023.0.0",
+  "arch": ["aarch64", "amd64", "armv7"],
+  "map": ["config:rw"],
+  "options": {
+    "PAPERLESS_URL": "http://192.168.178.133:8000",
+    "PAPERLESS_TOKEN": "dein_api_token",
+    "HA_WEBHOOK_URL": "https://deine-home-assistant-webhook-url"
+  },
+  "schema": {
+    "PAPERLESS_URL": "str",
+    "PAPERLESS_TOKEN": "str",
+    "HA_WEBHOOK_URL": "str"
+  }
+}
