@@ -14,7 +14,7 @@ hassio_api: false
 host_network: true
 
 options:
-  PAPERLESS_URL: "http://localhost:8000"
+  PAPERLESS_URL: "http://localhost:8010"
   PAPERLESS_TOKEN: ""
   HA_WEBHOOK_URL: ""
   OPENAI_API_KEY: ""
