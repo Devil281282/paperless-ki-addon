@@ -1,26 +1,28 @@
-name: Paperless KI Analyzer
-version: "1.0.0"
-slug: paperless-ki-analyzer
-description: KI-Analyse für Paperless-Dokumente mit GPT
-arch:
-  - amd64
-  - aarch64
-startup: application
-boot: auto
-ingress: false
-panel_icon: mdi:file-document-outline
-init: false
-hassio_api: false
-host_network: false
+{
+  "name": "Paperless KI Analyzer",
+  "version": "1.0.0",
+  "slug": "paperless-ki-analyzer",
+  "description": "KI-Analyse für Paperless-Dokumente mit GPT",
+  "arch": ["amd64", "aarch64"],
+  "startup": "application",
+  "boot": "auto",
+  "ingress": false,
+  "panel_icon": "mdi:file-document-outline",
+  "init": false,
+  "hassio_api": false,
+  "host_network": false,                <-- 🔁 Hier auf false!
+  "privileged": ["SYS_ADMIN"],         <-- 🔐 optional für erweiterten Zugriff
+  "options": {
+    "PAPERLESS_URL": "http://localhost:8010",
+    "PAPERLESS_TOKEN": "",
+    "HA_WEBHOOK_URL": "",
+    "OPENAI_API_KEY": ""
+  },
+  "schema": {
+    "PAPERLESS_URL": "str",
+    "PAPERLESS_TOKEN": "str",
+    "HA_WEBHOOK_URL": "str",
+    "OPENAI_API_KEY": "str"
+  }
+}
 
-options:
-  PAPERLESS_URL: "http://localhost:8010"
-  PAPERLESS_TOKEN: ""
-  HA_WEBHOOK_URL: ""
-  OPENAI_API_KEY: ""
-
-schema:
-  PAPERLESS_URL: str
-  PAPERLESS_TOKEN: str
-  HA_WEBHOOK_URL: str
-  OPENAI_API_KEY: str
