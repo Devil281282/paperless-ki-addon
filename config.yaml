@@ -11,7 +11,7 @@ ingress: false
 panel_icon: mdi:file-document-outline
 init: false
 hassio_api: false
-host_network: true
+host_network: false
 
 options:
   PAPERLESS_URL: "http://localhost:8010"
